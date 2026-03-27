@@ -399,3 +399,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Movie files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wmv
