@@ -11,7 +11,8 @@
             _playbackSpeed = 1.0;
 
             //TODO replace this with the absolute path to your video location - refer to the repo docs for sample videos to download for each use case
-            MyPlayer.Source = "d:\\dev\\mauimediaelementbugapp\\testmovie.mp4";
+            MyPlayer.Source = "d:\\downloads\\gopro\\test-movie-with-sound.mp4";
+            //MyPlayer.Source = "d:\\downloads\\gopro\\test-movie-no-sound.mp4";
         }
 
         private void MyPlayer_OnLoaded(object sender, EventArgs e)
@@ -29,8 +30,8 @@
         {
             // note how every time this fires, a movie with sound will briefly stutter while the speed change occurs
             // replace the video with one that excludes an audio track and the speed increase is smooth
-            _playbackSpeed += 0.1;
-            MyPlayer.Speed = _playbackSpeed;
+            _playbackSpeed += 0.05;
+            MyPlayer.Speed = _playbackSpeed < 3 ? +_playbackSpeed : 3;
         }
     }
 }
